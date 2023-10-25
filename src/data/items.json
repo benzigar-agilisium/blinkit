@@ -1,0 +1,259 @@
+[
+  {
+    "id": 1,
+    "categoryName": "Munchies Gift Packs",
+    "categoryImage": "https://cdn.grofers.com/a10dccab-6301-4e0c-b49e-a221b0edb0d5.png",
+    "showText": "Buy Munchies Gift Packs Online",
+    "products": [
+      {
+        "id": 1,
+        "productName": "Supreme Joy Gift Pack",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/532903a.jpg",
+        "productQuantity": "700 g",
+        "actualPrice": 230,
+        "discountPercentage": 10,
+        "sellingPrice": 230,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "categoryName": "Chips & Crisps",
+    "categoryImage": "https://cdn.grofers.com/app/images/category/cms_images/icon/940_1643445382163.png",
+    "showText": "Buy Chips & Crisps online",
+    "products": [
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "categoryName": "Nachos",
+    "categoryImage": "https://cdn.grofers.com/app/images/category/cms_images/icon/316_1643445356931.png",
+    "showText": "Buy Munchies Gift Packs Online",
+    "products": [
+      {
+        "id": 1,
+        "productName": "Doritos Diamita Fiery Lime and Chilli Snacks",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/518444a.jpg?ts=1679400449",
+        "productQuantity": "700 g",
+        "actualPrice": 230,
+        "discountPercentage": 10,
+        "sellingPrice": 230,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "categoryName": "Bhujia & Mixtures",
+    "categoryImage": "https://cdn.grofers.com/app/images/category/cms_images/icon/1178_1643445391732.png",
+    "showText": "Buy Munchies Gift Packs Online",
+    "products": [
+      {
+        "id": 1,
+        "productName": "Doritos Diamita Fiery Lime and Chilli Snacks",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/518444a.jpg?ts=1679400449",
+        "productQuantity": "700 g",
+        "actualPrice": 230,
+        "discountPercentage": 10,
+        "sellingPrice": 230,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "categoryName": "Popcorn",
+    "categoryImage": "https://cdn.grofers.com/app/images/category/cms_images/icon/156_1643445347481.png",
+    "showText": "Buy Munchies Gift Packs Online",
+    "products": [
+      {
+        "id": 1,
+        "productName": "Doritos Diamita Fiery Lime and Chilli Snacks",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/518444a.jpg?ts=1679400449",
+        "productQuantity": "700 g",
+        "actualPrice": 230,
+        "discountPercentage": 10,
+        "sellingPrice": 230,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "categoryName": "Namkeen Snacks",
+    "categoryImage": "https://cdn.grofers.com/app/images/category/cms_images/icon/29_1647516811054.png",
+    "showText": "Buy Munchies Gift Packs Online",
+    "products": [
+      {
+        "id": 1,
+        "productName": "Doritos Diamita Fiery Lime and Chilli Snacks",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/518444a.jpg?ts=1679400449",
+        "productQuantity": "700 g",
+        "actualPrice": 230,
+        "discountPercentage": 10,
+        "sellingPrice": 230,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      }
+    ]
+  }
+]

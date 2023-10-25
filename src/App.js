@@ -1,10 +1,24 @@
 import React from "react";
-import "@fontsource-variable/josefin-sans";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Home from "./pages/home";
+import Main from "./pages/home/main";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    children: [
+      {
+        path: "/",
+        element: <Main />,
+      },
+    ],
+  },
+]);
 
 export default function App() {
-  return (
-    <div className="bg-black min-h-screen text-white font-bold flex justify-center items-center">
-      <p className="text-6xl">App is ready</p>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }

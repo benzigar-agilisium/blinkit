@@ -1,25 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "@fontsource-variable/josefin-sans";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-black min-h-screen text-white font-bold flex justify-center items-center">
+      <p className="text-6xl">App is ready</p>
     </div>
   );
 }
-
-export default App;

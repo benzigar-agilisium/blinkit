@@ -49,10 +49,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="shadow-md py-4 text-zinc-500 text-sm z-10">
+      <div className="shadow-md text-zinc-500 text-sm z-10">
         <div className="container mx-auto flex justify-center">
           {items.map((e) => (
-            <p className="mx-4">{e.categoryName}</p>
+            <button className="px-4 hover:bg-zinc-100 py-4">
+              {e.categoryName}
+            </button>
           ))}
         </div>
       </div>

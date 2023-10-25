@@ -21,15 +21,15 @@ export default function Main() {
                   selectedCategory === e.id
                     ? "border-l-green-600 bg-green-50"
                     : "border-l-white"
-                } border-l-4 w-full border-b-2 border-small-width-bottom text-xs flex items-center px-5 py-3`}
+                } transition-all duration-300 border-l-4 w-full border-b-2 border-small-width-bottom text-xs flex items-center px-5 py-3`}
               >
                 <div className="bg-zinc-100 rounded-md h-[50px] w-[50px] overflow-hidden">
                   <img
                     style={{
                       transform:
                         selectedCategory === e.id
-                          ? "scale(1.1) translateY(0)"
-                          : "scale(1) translateY(10px)",
+                          ? "scale(1) translateY(0)"
+                          : "scale(0.8) translateY(10px)",
                     }}
                     className="transition-all duration-500 object-cover"
                     src={e.categoryImage}
@@ -39,7 +39,7 @@ export default function Main() {
                 <p
                   className="ml-2"
                   style={{
-                    fontWeight: 600,
+                    fontWeight: 500,
                   }}
                 >
                   {e.categoryName}
@@ -69,10 +69,53 @@ export default function Main() {
               {items
                 .find((e) => e.id === selectedCategory)
                 .products?.map((e) => (
-                  <div className="w-1/5 p-1">
-                    <div className="flex flex-col justify-between rounded-lg bg-white overflow-hidden">
-                      <div className="flex flex-col text-xs px-3 pb-3">
-                        <img src={e.productImage} alt="" />
+                  <div className="w-1/5 p-1 flex flex-col">
+                    <div className="flex-1 flex flex-col justify-between rounded-lg bg-white overflow-hidden">
+                      <div className="relative flex flex-col text-xs px-3 pb-3">
+                        <img
+                          className="w-full aspect-square object-cover"
+                          src={e.productImage}
+                          alt=""
+                        />
+                        {e.discountPercentage ? (
+                          <div className="absolute top-0 left-0 ml-2">
+                            <div className="relative">
+                              <img className="h-8" src="/badge.svg" alt="" />
+                              <div
+                                style={{
+                                  fontSize: 9,
+                                }}
+                                className="font-bold text-white absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-xs"
+                              >
+                                <p className="m-0">
+                                  {e.discountPercentage + "%"}
+                                </p>
+                                <p className="-mt-1">OFF</p>
+                              </div>
+                            </div>
+                          </div>
+                        ) : null}
+                      </div>
+                      <div className="text-xs flex flex-col px-3 pb-2">
+                        {e.deliveryTime ? (
+                          <div className="flex">
+                            <div className="bg-zinc-100 px-1 mb-2 rounded-md flex items-center">
+                              <img
+                                className="h-3 w-3"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                                alt=""
+                              />
+                              <p
+                                style={{
+                                  fontWeight: 600,
+                                  fontSize: 10,
+                                }}
+                              >
+                                {e.deliveryTime}
+                              </p>
+                            </div>
+                          </div>
+                        ) : null}
                         <p
                           style={{
                             fontWeight: 600,
@@ -83,8 +126,6 @@ export default function Main() {
                         <p className="text-zinc-500 mt-2">
                           {e.productQuantity}
                         </p>
-                      </div>
-                      <div className="text-xs flex flex-col px-3 pb-2">
                         <div className="flex justify-between items-center">
                           <div className="flex flex-col">
                             <p className="font-bold">₹{e.sellingPrice}</p>

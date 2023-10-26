@@ -49,7 +49,7 @@ export default function Home() {
               <img src="/logo.svg" alt="" />
             </Link>
             <div className="ml-14 flex flex-col">
-              <h1 className="font-bold text-lg">Delivery in 14 minutes</h1>
+              <h1 className="font-bold text-lg">Delivery in 15 minutes</h1>
               <p className="text-xs">Bengaluru, Karnataka, India</p>
             </div>
             <div className="flex-1 pl-5">

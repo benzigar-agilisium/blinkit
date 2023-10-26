@@ -3,14 +3,25 @@ import { AiOutlineClose, AiOutlineMinus, AiOutlinePlus, AiOutlineShoppingCart } 
 import useCart from "../hooks/useCart";
 import { BiRupee } from "react-icons/bi";
 import { BsChevronRight } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
-  const { cart, getItemCount, getTotalAmount, removeQuantity, addQuantity, getQuantityInCart } = useCart();
+  const {
+    cart,
+    getItemCount,
+    getProductDiscount,
+    getActualTotalAmount,
+    getTotalAmount,
+    removeQuantity,
+    addQuantity,
+    getQuantityInCart,
+  } = useCart();
 
   const [showCart, setShowCart] = React.useState(false);
+  const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col bg-green-700 text-white py-3 rounded-lg px-4">
+    <>
       {showCart ? (
         <div className="flex fixed inset-0 bg-black z-50 bg-opacity-75">
           <div className="flex-1"></div>
@@ -36,7 +47,7 @@ export default function Cart() {
                         alt=""
                       />
                       <div className="ml-4 flex-1 text-xs flex flex-col">
-                        <p className="font-bold text-sm mb-1">Delivery in 17 minutes</p>
+                        <p className="font-bold text-sm mb-1">Delivery in 15 minutes</p>
                         <p className="text-zinc-500">
                           Shipment of {getItemCount()} {getItemCount() === 1 ? "item" : "items"}
                         </p>
@@ -95,14 +106,24 @@ export default function Cart() {
                       <p>MRP</p>
                       <div className="flex items-center">
                         <BiRupee className="text-md m-0" />
-                        <p>{getTotalAmount()}</p>
+                        <p>{getActualTotalAmount()}</p>
                       </div>
                     </p>
                     <p className="mt-2 flex justify-between items-center text-zinc-500">
                       <p>Delivery charge</p>
                       <p className="text-green-600">FREE</p>
                     </p>
-                    <p className="mt-4 flex justify-between items-center text-zinc-800 text-sm">
+                    {getProductDiscount() ? (
+                      <p className="mt-2 flex justify-between items-center text-zinc-500">
+                        <p>Product Discount</p>
+                        <div className="text-green-600 flex items-center">
+                          <p>-</p>
+                          <BiRupee className="text-md m-0" />
+                          <p>{getProductDiscount()}</p>
+                        </div>
+                      </p>
+                    ) : null}
+                    <p className="mt-5 font-bold flex justify-between items-center text-zinc-800 text-sm">
                       <p>Grand total</p>
                       <div className="flex items-center">
                         <BiRupee className="text-md m-0" />
@@ -120,8 +141,8 @@ export default function Cart() {
                   </div>
                 </div>
                 <div className="bg-zinc-100 flex flex-col">
-                  <div className="bg-white rounded-t-xl shadow-xl flex flex-col">
-                    <button className="bg-green-700 flex items-center justify-between text-white p-3 rounded-md m-5 px-4">
+                  <div className="bg-white rounded-t-xl shadow-2xl flex flex-col">
+                    <button className="bg-green-700 hover:bg-green-800 transition-all flex items-center justify-between text-white p-3 rounded-md m-5 px-4">
                       <div className="flex flex-col items-start">
                         <div className="font-bold flex items-center">
                           <BiRupee className="text-md m-0" />
@@ -163,25 +184,28 @@ export default function Cart() {
       ) : null}
       <button
         onClick={() => {
-          setShowCart(!showCart);
+          // setShowCart(!showCart);
+          navigate("/cart");
         }}
-        className="min-w-[90px] flex items-center"
+        className="flex flex-col bg-green-700 text-white py-3 rounded-lg px-4"
       >
-        <AiOutlineShoppingCart className="hover:rotate-12 transition-all text-3xl" />
-        {cart?.length > 0 ? (
-          <div className="font-bold ml-2 flex text-xs flex-col items-start">
-            <p>
-              {getItemCount()} {getItemCount() === 1 ? "item" : "items"}
-            </p>
-            <p className="flex items-center">
-              <BiRupee className="text-md m-0" />
-              <p>{getTotalAmount()}</p>
-            </p>
-          </div>
-        ) : (
-          <p className="text-xs font-bold ml-2">My Cart</p>
-        )}
+        <div className="min-w-[90px] flex items-center">
+          <AiOutlineShoppingCart className="hover:rotate-12 transition-all text-3xl" />
+          {cart?.length > 0 ? (
+            <div className="font-bold ml-2 flex text-xs flex-col items-start">
+              <p>
+                {getItemCount()} {getItemCount() === 1 ? "item" : "items"}
+              </p>
+              <p className="flex items-center">
+                <BiRupee className="text-md m-0" />
+                <p>{getTotalAmount()}</p>
+              </p>
+            </div>
+          ) : (
+            <p className="text-xs font-bold ml-2">My Cart</p>
+          )}
+        </div>
       </button>
-    </div>
+    </>
   );
 }

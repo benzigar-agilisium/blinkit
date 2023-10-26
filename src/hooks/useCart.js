@@ -44,6 +44,26 @@ export default function useCart() {
     return total;
   };
 
+  const getProductDiscount = () => {
+    let total = 0;
+    cart.forEach((each) => {
+      if (each.sellingPrice !== each.actualPrice) total += (each.actualPrice - each.sellingPrice) * each.quantity;
+    });
+    return total;
+  };
+
+  const getActualTotalAmount = () => {
+    let total = 0;
+    cart.forEach((each) => {
+      total += each.actualPrice * each?.quantity;
+    });
+    return total;
+  };
+
+  React.useEffect(() => {
+    if (cart) localStorage.setItem("CART", JSON.stringify(cart));
+  }, [cart]);
+
   return {
     cart,
     addToCart,
@@ -55,5 +75,7 @@ export default function useCart() {
     getTotalAmount,
     getQuantityInCart,
     getItemCount,
+    getActualTotalAmount,
+    getProductDiscount,
   };
 }

@@ -114,7 +114,7 @@ export default function Main() {
                           {e.productName}
                         </p>
                         <p className="text-zinc-500 mt-2">{e.productQuantity}</p>
-                        <div className="flex justify-between items-center">
+                        <div className="mt-2 flex justify-between items-center">
                           <div className="flex flex-col">
                             <div className="flex items-center font-bold">
                               <BiRupee className="text-md m-0" />
@@ -122,7 +122,10 @@ export default function Main() {
                             </div>
                             {e.sellingPrice !== e.actualPrice ? (
                               <div className="relative">
-                                <p className="text-zinc-500">₹{e.actualPrice}</p>
+                                <div className="flex items-center font-bold">
+                                  <BiRupee className="text-md m-0" />
+                                  <p>{e.actualPrice}</p>
+                                </div>
                                 <div className="absolute top-0 bottom-0 w-full flex justify-center items-center">
                                   <div className="w-full h-[2px] bg-zinc-500"></div>
                                 </div>

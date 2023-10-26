@@ -7,12 +7,17 @@ import Home from "./pages/home";
 import Main from "./pages/home/main";
 import { Provider } from "react-redux";
 import { store } from "./stores/main";
+import Cart from "./pages/home/cart";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
     children: [
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
       {
         path: "/",
         element: <Main />,

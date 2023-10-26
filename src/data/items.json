@@ -15,17 +15,6 @@
         "sellingPrice": 200,
         "deliveryTime": "",
         "additionalInfo": "Sourced at 5 AM"
-      },
-      {
-        "id": "653a06ac1c914ab8466387a8",
-        "productName": "Supreme Joy Gift Pack",
-        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/532903a.jpg",
-        "productQuantity": "700 g",
-        "actualPrice": 230,
-        "discountPercentage": 10,
-        "sellingPrice": 200,
-        "deliveryTime": "",
-        "additionalInfo": "Sourced at 5 AM"
       }
     ]
   },

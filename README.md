@@ -26,6 +26,7 @@ The project is structured as follows:
 - `components`: Contains reusable components that can be used throughout the application.
 - `hooks`: Contains custom hooks that are used to provide additional functionality to components.
 - `store`: Contains the Redux store configuration.
+- `data`: Contains the JSON file of whole product list.
 
 **Getting started:**
 

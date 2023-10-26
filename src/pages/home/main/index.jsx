@@ -3,6 +3,7 @@ import React from "react";
 import items from "../../../data/items.json";
 import useCart from "../../../hooks/useCart";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { BiRupee, BiSearch } from "react-icons/bi";
 import { useSelector } from "react-redux";
 
 export default function Main() {
@@ -115,7 +116,10 @@ export default function Main() {
                         <p className="text-zinc-500 mt-2">{e.productQuantity}</p>
                         <div className="flex justify-between items-center">
                           <div className="flex flex-col">
-                            <p className="font-bold">₹{e.sellingPrice}</p>
+                            <div className="flex items-center font-bold">
+                              <BiRupee className="text-md m-0" />
+                              <p>{e.sellingPrice}</p>
+                            </div>
                             {e.sellingPrice !== e.actualPrice ? (
                               <div className="relative">
                                 <p className="text-zinc-500">₹{e.actualPrice}</p>
@@ -126,8 +130,9 @@ export default function Main() {
                             ) : null}
                           </div>
                           {isInCart(e.id) ? (
-                            <div className="min-w-[80px] font-bold justify-between flex items-center border-small-width px-2 py-2.5 bg-green-700 rounded-md text-xs text-white">
+                            <div className="min-w-[80px] font-bold justify-between flex items-center border-small-width border-green-700 px-2 bg-green-700 rounded-md text-xs text-white">
                               <button
+                                className="py-3"
                                 onClick={() => {
                                   removeQuantity(e.id);
                                 }}
@@ -136,6 +141,7 @@ export default function Main() {
                               </button>
                               <p>{getQuantityInCart(e.id)}</p>
                               <button
+                                className="py-3"
                                 onClick={() => {
                                   addQuantity(e.id);
                                 }}
@@ -148,7 +154,7 @@ export default function Main() {
                               onClick={() => {
                                 addToCart(e);
                               }}
-                              className="bg-green-50 border-small-width px-5 py-2 border-2 border-green-700 rounded-md text-sm text-green-700"
+                              className="min-w-[80px] bg-green-50 border-small-width px-5 py-2 border-2 border-green-700 rounded-md text-sm text-green-700"
                               style={{
                                 fontWeight: 600,
                               }}

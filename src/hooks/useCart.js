@@ -36,6 +36,14 @@ export default function useCart() {
 
   const getQuantityInCart = (id) => cart.find((e) => e.id === id)?.quantity ?? 0;
 
+  const getItemCount = () => {
+    let total = 0;
+    cart.forEach((each) => {
+      if (each.quantity) total += each.quantity;
+    });
+    return total;
+  };
+
   return {
     cart,
     addToCart,
@@ -46,5 +54,6 @@ export default function useCart() {
     removeQuantity,
     getTotalAmount,
     getQuantityInCart,
+    getItemCount,
   };
 }

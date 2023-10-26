@@ -1,13 +1,15 @@
 import React from "react";
+import VerticalWrapper from "../../atoms/verticalWrapper";
+import HorizontalWrapper from "../../atoms/horizontalWrapper";
 
 export default function CategoryListForHeader({ items = {} }) {
   return (
-    <div className="shadow-md text-zinc-500 text-sm z-10">
-      <div className="container mx-auto flex justify-center">
+    <VerticalWrapper className="shadow-md text-zinc-500 text-sm z-10">
+      <HorizontalWrapper justify="center" className="container mx-auto">
         {items.map((item) => (
           <button className="px-4 hover:bg-zinc-100 py-4">{item.categoryName}</button>
         ))}
-      </div>
-    </div>
+      </HorizontalWrapper>
+    </VerticalWrapper>
   );
 }

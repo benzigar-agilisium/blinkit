@@ -1,8 +1,16 @@
 import React from "react";
 
-export default function HorizontalWrapper({ className = "", children, ...rest }) {
+export default function HorizontalWrapper({ align = "", className = "", children, justify = "", style = {}, ...rest }) {
   return (
-    <div className={`flex items-center ` + className} {...rest}>
+    <div
+      style={{
+        alignItems: align || "start",
+        justifyContent: justify || "start",
+        ...style,
+      }}
+      className={`flex ` + className}
+      {...rest}
+    >
       {children}
     </div>
   );

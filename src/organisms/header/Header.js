@@ -12,25 +12,26 @@ import CategoryListForHeader from "../../molecules/categoryListForHeader";
 
 import Cart from "../../components/Cart";
 import items from "../../data/items.json";
+import VerticalWrapper from "../../atoms/verticalWrapper";
 
 export default function Header() {
   return (
-    <div className="bg-white z-20 sticky top-0">
-      <div
+    <VerticalWrapper className="bg-white z-20 sticky top-0">
+      <VerticalWrapper
         className="border-b-2"
         style={{
           borderWidth: 1,
         }}
       >
-        <HorizontalWrapper className="container mx-auto">
+        <HorizontalWrapper align="center" className="container mx-auto">
           <Logo />
           <DeliveryInfo />
           <Searchbar />
           <Text className="px-14">Login</Text>
           <Cart />
         </HorizontalWrapper>
-      </div>
+      </VerticalWrapper>
       <CategoryListForHeader items={items} />
-    </div>
+    </VerticalWrapper>
   );
 }

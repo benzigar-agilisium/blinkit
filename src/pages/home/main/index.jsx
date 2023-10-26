@@ -1,35 +1,32 @@
 import React from "react";
 
 import items from "../../../data/items.json";
+import useCart from "../../../hooks/useCart";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { useSelector } from "react-redux";
 
 export default function Main() {
-  const [selectedCategory, setSelectedCategory] = React.useState(
-    items?.[0]?.id
-  );
+  const [selectedCategory, setSelectedCategory] = React.useState(items?.[0]?.id);
+  const { addToCart, isInCart, getQuantityInCart, addQuantity, removeQuantity } = useCart();
 
   return (
     <div className="flex flex-col">
       <div className="flex flex-col container mx-auto px-10">
         <div className="border-x-2 flex h-[80vh] border-small-width">
-          <div className="border-r-2 border-small-width-right w-1/4 overflow-y-scroll pt-5">
+          <div className="border-r-2 border-small-width-right w-1/5 overflow-y-scroll pt-5">
             {items?.map((e, i) => (
               <button
                 onClick={() => {
                   setSelectedCategory(e.id);
                 }}
                 className={`${
-                  selectedCategory === e.id
-                    ? "border-l-green-600 bg-green-50"
-                    : "border-l-white"
+                  selectedCategory === e.id ? "border-l-green-600 bg-green-50" : "border-l-white"
                 } transition-all duration-300 border-l-4 w-full border-b-2 border-small-width-bottom text-xs flex items-center px-5 py-3`}
               >
                 <div className="bg-zinc-100 rounded-md h-[50px] w-[50px] overflow-hidden">
                   <img
                     style={{
-                      transform:
-                        selectedCategory === e.id
-                          ? "scale(1) translateY(0)"
-                          : "scale(0.8) translateY(10px)",
+                      transform: selectedCategory === e.id ? "scale(1) translateY(0)" : "scale(0.8) translateY(10px)",
                     }}
                     className="transition-all duration-500 object-cover"
                     src={e.categoryImage}
@@ -49,9 +46,7 @@ export default function Main() {
           </div>
           <div className="overflow-y-scroll flex-1 flex flex-col bg-zinc-100">
             <div className="bg-white flex justify-between items-center p-3 text-sm">
-              <h2 className="font-bold">
-                {items.find((e) => e.id === selectedCategory).showText}
-              </h2>
+              <h2 className="font-bold">{items.find((e) => e.id === selectedCategory).showText}</h2>
               <div className="text-zinc-500 text-xs flex items-center">
                 <p className="">Sort by</p>
                 <select
@@ -72,11 +67,7 @@ export default function Main() {
                   <div className="w-1/5 p-1 flex flex-col">
                     <div className="flex-1 flex flex-col justify-between rounded-lg bg-white overflow-hidden">
                       <div className="relative flex flex-col text-xs px-3 pb-3">
-                        <img
-                          className="w-full aspect-square object-cover"
-                          src={e.productImage}
-                          alt=""
-                        />
+                        <img className="w-full aspect-square object-cover" src={e.productImage} alt="" />
                         {e.discountPercentage ? (
                           <div className="absolute top-0 left-0 ml-2">
                             <div className="relative">
@@ -87,9 +78,7 @@ export default function Main() {
                                 }}
                                 className="font-bold text-white absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-xs"
                               >
-                                <p className="m-0">
-                                  {e.discountPercentage + "%"}
-                                </p>
+                                <p className="m-0">{e.discountPercentage + "%"}</p>
                                 <p className="-mt-1">OFF</p>
                               </div>
                             </div>
@@ -123,31 +112,50 @@ export default function Main() {
                         >
                           {e.productName}
                         </p>
-                        <p className="text-zinc-500 mt-2">
-                          {e.productQuantity}
-                        </p>
+                        <p className="text-zinc-500 mt-2">{e.productQuantity}</p>
                         <div className="flex justify-between items-center">
                           <div className="flex flex-col">
                             <p className="font-bold">₹{e.sellingPrice}</p>
                             {e.sellingPrice !== e.actualPrice ? (
                               <div className="relative">
-                                <p className="text-zinc-500">
-                                  ₹{e.actualPrice}
-                                </p>
+                                <p className="text-zinc-500">₹{e.actualPrice}</p>
                                 <div className="absolute top-0 bottom-0 w-full flex justify-center items-center">
                                   <div className="w-full h-[2px] bg-zinc-500"></div>
                                 </div>
                               </div>
                             ) : null}
                           </div>
-                          <button
-                            className="bg-green-50 border-small-width px-5 py-2 border-2 border-green-700 rounded-md text-sm text-green-700"
-                            style={{
-                              fontWeight: 600,
-                            }}
-                          >
-                            Add
-                          </button>
+                          {isInCart(e.id) ? (
+                            <div className="min-w-[80px] font-bold justify-between flex items-center border-small-width px-2 py-2.5 bg-green-700 rounded-md text-xs text-white">
+                              <button
+                                onClick={() => {
+                                  removeQuantity(e.id);
+                                }}
+                              >
+                                <AiOutlineMinus className="text-md" />
+                              </button>
+                              <p>{getQuantityInCart(e.id)}</p>
+                              <button
+                                onClick={() => {
+                                  addQuantity(e.id);
+                                }}
+                              >
+                                <AiOutlinePlus className="text-md" />
+                              </button>
+                            </div>
+                          ) : (
+                            <button
+                              onClick={() => {
+                                addToCart(e);
+                              }}
+                              className="bg-green-50 border-small-width px-5 py-2 border-2 border-green-700 rounded-md text-sm text-green-700"
+                              style={{
+                                fontWeight: 600,
+                              }}
+                            >
+                              Add
+                            </button>
+                          )}
                         </div>
                       </div>
                     </div>

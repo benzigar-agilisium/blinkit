@@ -177,6 +177,160 @@
         "sellingPrice": 20,
         "deliveryTime": "",
         "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 12,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 40,
+        "sellingPrice": 20,
+        "deliveryTime": "",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 20,
+        "sellingPrice": 12,
+        "deliveryTime": "",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 10,
+        "sellingPrice": 20,
+        "deliveryTime": "",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 1,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/289152a.jpg?ts=1684345618",
+        "productQuantity": "48 g",
+        "actualPrice": 12,
+        "discountPercentage": 0,
+        "sellingPrice": 12,
+        "deliveryTime": "14 mins",
+        "additionalInfo": "Sourced at 5 AM"
+      },
+      {
+        "id": 2,
+        "productName": "Lay's West Indies Hot n Sweet Chilli Flavour",
+        "productImage": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+        "productQuantity": "40 g",
+        "actualPrice": 20,
+        "discountPercentage": 0,
+        "sellingPrice": 20,
+        "deliveryTime": "",
+        "additionalInfo": "Sourced at 5 AM"
       }
     ]
   },

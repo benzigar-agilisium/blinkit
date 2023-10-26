@@ -5,6 +5,8 @@ import "@fontsource/poppins/700.css";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Home from "./pages/home";
 import Main from "./pages/home/main";
+import { Provider } from "react-redux";
+import { store } from "./stores/main";
 
 const router = createBrowserRouter([
   {
@@ -20,5 +22,9 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  );
 }

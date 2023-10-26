@@ -1,11 +1,38 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { BiSearch } from "react-icons/bi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa6";
 
 import items from "../../data/items.json";
+import useCart from "../../hooks/useCart";
+
+const footerIcons = [
+  {
+    link: "https://www.facebook.com/blinkit.india/",
+    icon: FaFacebookF,
+  },
+  {
+    link: "https://twitter.com/i/flow/login?redirect_after_login=%2Fletsblinkit%2F",
+    icon: FaTwitter,
+  },
+  {
+    link: "https://www.instagram.com/letsblinkit/",
+    icon: FaInstagram,
+  },
+  {
+    link: "https://in.linkedin.com/company/letsblinkit",
+    icon: FaLinkedinIn,
+  },
+];
 
 export default function Home() {
+  const { cart, getTotalAmount, clearCart } = useCart();
   return (
     <div className="flex flex-col">
       <div
@@ -15,14 +42,15 @@ export default function Home() {
         }}
       >
         <div className="flex items-center container mx-auto">
-          <div
+          <Link
+            to={"/"}
             className="border-r-2 py-8 pr-4"
             style={{
               borderRightWidth: 1,
             }}
           >
             <img src="/logo.svg" alt="" />
-          </div>
+          </Link>
           <div className="ml-14 flex flex-col">
             <h1 className="font-bold text-lg">Delivery in 14 minutes</h1>
             <p className="text-xs">Bengaluru, Karnataka, India</p>
@@ -38,14 +66,20 @@ export default function Home() {
             </div>
           </div>
           <p className="px-14">Login</p>
-          <div className="flex flex-col bg-green-700 text-white py-2 rounded-lg px-4">
-            <div className="flex items-center">
+          <div className="flex flex-col bg-green-700 text-white py-3 rounded-lg px-4">
+            <button onClick={clearCart} className="flex items-center">
               <AiOutlineShoppingCart className="text-2xl" />
-              <div className="font-bold ml-2 flex text-xs flex-col">
-                <p>3 items</p>
-                <p>₹441</p>
-              </div>
-            </div>
+              {cart?.length > 0 ? (
+                <div className="font-bold ml-2 flex text-xs flex-col items-start">
+                  <p>
+                    {cart.length} {cart.length === 1 ? "item" : "items"}
+                  </p>
+                  <p>₹{getTotalAmount()}</p>
+                </div>
+              ) : (
+                <p className="text-sm font-bold ml-2">My Cart</p>
+              )}
+            </button>
           </div>
         </div>
       </div>
@@ -59,6 +93,47 @@ export default function Home() {
         </div>
       </div>
       <Outlet />
+      <div className="mt-10 container mx-auto">
+        <p className="my-5 text-xs text-center text-zinc-500">
+          “Blinkit” is owned & managed by "Blink Commerce Private Limited"
+          (formerly known as Grofers India Private Limited) and is not related,
+          linked or interconnected in whatsoever manner or nature, to
+          “GROFFR.COM” which is a real estate services business operated by
+          “Redstone Consultancy Services Private Limited”.
+        </p>
+        <div className="mt-10 mb-5 text-xs flex items-center justify-between bg-zinc-50 px-3 py-3 text-zinc-500">
+          <div className="w-1/3">
+            <p>
+              © Blink Commerce Private Limited (formerly known as Grofers India
+              Private Limited), 2016-2023
+            </p>
+          </div>
+          <div className="w-1/3 flex items-center">
+            <p className="mx-4 font-bold">Download App</p>
+            <img
+              className="h-6 mx-4"
+              src="https://blinkit.com/d61019073b700ca49d22.png"
+              alt=""
+            />
+            <img
+              className="h-6 mx-4"
+              src="https://blinkit.com/8ed033800ea38f24c4f0.png"
+              alt=""
+            />
+          </div>
+          <div className="flex items-center">
+            {footerIcons?.map((each) => (
+              <Link
+                target="_blank"
+                to={each.link}
+                className="text-white bg-black p-3 rounded-full text-xl mx-3"
+              >
+                <each.icon />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -10,8 +10,7 @@ export default function Home() {
   return (
     <VerticalWrapper>
       <Header />
-      {/* CHILDREN WILL BE RENDERED HERE  */}
-      <Outlet />
+      <Outlet /> {/* CHILDREN  */}
       <Footer />
     </VerticalWrapper>
   );

@@ -5,14 +5,15 @@ import Logo from "../../atoms/logo";
 import HorizontalWrapper from "../../atoms/horizontalWrapper";
 import Searchbar from "../../atoms/searchBar";
 import Text from "../../atoms/text";
+import VerticalWrapper from "../../atoms/verticalWrapper";
 
 // MOLECULES
 import DeliveryInfo from "../../molecules/deliveryInfo";
 import CategoryListForHeader from "../../molecules/categoryListForHeader";
 
-import Cart from "../../components/Cart";
+import Cart from "../cart/Cart";
+
 import items from "../../data/items.json";
-import VerticalWrapper from "../../atoms/verticalWrapper";
 
 export default function Header() {
   return (

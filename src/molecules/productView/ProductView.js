@@ -1,4 +1,6 @@
 import React from "react";
+import classNames from "classnames";
+
 import VerticalWrapper from "../../atoms/verticalWrapper";
 import HorizontalWrapper from "../../atoms/horizontalWrapper";
 import ProductImage from "../../atoms/productImage";
@@ -9,7 +11,7 @@ import ProductPrice from "../../atoms/productPrice";
 import ProductCartButton from "../../atoms/productCartButton/ProductCartButton";
 import useCart from "../../hooks/useCart";
 
-export default function ProductView({ type = "large", product = {} }) {
+export default function ProductView({ className = "", type = "large", product = {} }) {
   const { addToCart, isInCart, getQuantityInCart, addQuantity, removeQuantity } = useCart();
 
   if (type === "large")
@@ -46,7 +48,7 @@ export default function ProductView({ type = "large", product = {} }) {
     );
   if (type === "cart")
     return (
-      <HorizontalWrapper align="stretch" className="mt-10 flex text-xs">
+      <HorizontalWrapper align="stretch" className={classNames("mt-10 flex text-xs", className)}>
         <ProductImage type="small" imageUrl={product.productImage} />
         <VerticalWrapper className="flex-1 ml-3 flex justify-between flex-col">
           <VerticalWrapper className="max-w-[150px]">

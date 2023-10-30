@@ -3,26 +3,42 @@ import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import Home from "./pages/home";
-import Products from "./pages/home/products";
+import Template from "./organisms/template";
+
 import { Provider } from "react-redux";
 import { store } from "./stores/main";
-import Cart from "./pages/home/cart";
+
+import Products from "./pages/products";
+import Cart from "./pages/cart";
+import NotFound from "./pages/notFound";
+import HomePage from "./pages/homePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Template />,
     children: [
+      {
+        path: "/cd/:id",
+        element: <Products />,
+      },
       {
         path: "/cart",
         element: <Cart />,
       },
       {
+        path: "/404",
+        element: <NotFound />,
+      },
+      {
         path: "/",
-        element: <Products />,
+        element: <HomePage />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 

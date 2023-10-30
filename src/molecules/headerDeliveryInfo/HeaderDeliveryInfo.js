@@ -6,8 +6,8 @@ import VerticalWrapper from "../../atoms/verticalWrapper";
 
 export default function HeaderDeliveryInfo() {
   return (
-    <VerticalWrapper className="ml-14">
-      <Heading>Delivery in 15 minutes</Heading>
+    <VerticalWrapper className="lg:ml-14">
+      <Heading className="hidden md:flex">Delivery in 15 minutes</Heading>
       <SubText>Bengaluru, Karnataka, India</SubText>
     </VerticalWrapper>
   );

@@ -23,11 +23,13 @@ export default function CartButton() {
   const cartButtonClick = () => navigate("/cart");
 
   return (
-    <button onClick={cartButtonClick} className="flex flex-col bg-green-700 text-white py-3 rounded-lg px-4">
-      <div className="min-w-[90px] flex items-center">
-        <AiOutlineShoppingCart className="hover:rotate-12 transition-all text-3xl" />
-        {cart?.length > 0 ? <RenderButtonContent /> : <p className="text-xs font-bold ml-2">My Cart</p>}
-      </div>
-    </button>
+    <>
+      <button onClick={cartButtonClick} className="hidden lg:flex flex-col bg-green-700 text-white py-3 rounded-lg px-4">
+        <div className="min-w-[90px] flex items-center">
+          <AiOutlineShoppingCart className="hover:rotate-12 transition-all text-3xl" />
+          {cart?.length > 0 ? <RenderButtonContent /> : <p className="text-xs font-bold ml-2">My Cart</p>}
+        </div>
+      </button>
+    </>
   );
 }

@@ -7,6 +7,7 @@ export default function HorizontalWrapper({
   className = "",
   children,
   justify = "",
+  cutOnPhone = false,
   style = {},
   ...rest
 }) {
@@ -17,7 +18,7 @@ export default function HorizontalWrapper({
         justifyContent: justify || "start",
         ...style,
       }}
-      className={classNames(`flex`, { "flex-wrap": wrap }, className)}
+      className={classNames(`flex`, { "flex-wrap": wrap }, { "flex-col lg:flex-row ": cutOnPhone }, className)}
       {...rest}
     >
       {children}

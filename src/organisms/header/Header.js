@@ -10,7 +10,7 @@ import VerticalWrapper from "../../atoms/verticalWrapper";
 import HeaderDeliveryInfo from "../../molecules/headerDeliveryInfo";
 import CategoryListForHeader from "../../molecules/categoryListForHeader";
 
-import Cart from "../cart/Cart";
+import Cart from "../cartButton";
 
 import items from "../../data/items.json";
 import HeaderSearchBar from "../../atoms/headerSearchBar";

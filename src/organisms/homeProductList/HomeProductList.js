@@ -4,6 +4,7 @@ import HorizontalWrapper from "../../atoms/horizontalWrapper";
 import Heading from "../../atoms/heading";
 import Text from "../../atoms/text";
 import Dropdown from "../../atoms/dropdown/Dropdown";
+
 import ProductView from "../../molecules/productView/ProductView";
 
 import { dropDownOptions } from "./homeProductList.data";

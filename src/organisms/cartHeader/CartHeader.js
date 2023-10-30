@@ -6,8 +6,21 @@ import Text from "../../atoms/text";
 import ProductView from "../../molecules/productView/ProductView";
 import useCart from "../../hooks/useCart";
 
-export default function CartTopSection() {
+const renderItemText = (items) => `${items} ${items === 1 ? "item" : "items"}`;
+
+const RenderCart = React.memo(({ cart = [] }) => {
+  return (
+    <>
+      {cart.map((product) => (
+        <ProductView type="cart" product={product} />
+      ))}
+    </>
+  );
+});
+
+const CartHeader = () => {
   const { getItemCount, cart } = useCart();
+
   return (
     <VerticalWrapper className="bg-white flex-col p-3 rounded-lg">
       <Heading className="text-xl font-bold mb-5">Place Order</Heading>
@@ -17,13 +30,13 @@ export default function CartTopSection() {
             Delivery in 15 minutes
           </Text>
           <Text size="tiny" dim>
-            {getItemCount()} {getItemCount() === 1 ? "item" : "items"}
+            {renderItemText(getItemCount())}
           </Text>
         </VerticalWrapper>
       </HorizontalWrapper>
-      {cart.map((product) => (
-        <ProductView type="cart" product={product} />
-      ))}
+      <RenderCart cart={cart} />
     </VerticalWrapper>
   );
-}
+};
+
+export default React.memo(CartHeader);

@@ -44,6 +44,6 @@ export default function CartCheckoutButton({ type = "large" }) {
   const { getItemCount, getTotalAmount } = useCart();
 
   if (type === "large") return <LargeCheckoutButton itemsCount={getItemCount()} totalAmount={getTotalAmount()} />;
-  if (type === "small") return <SmallCheckOutButton totalAmount={getTotalAmount} />;
+  if (type === "small") return <SmallCheckOutButton totalAmount={getTotalAmount()} />;
   else return null;
 }

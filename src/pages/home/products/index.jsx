@@ -4,6 +4,7 @@ import items from "../../../data/items.json";
 
 import VerticalWrapper from "../../../atoms/verticalWrapper";
 import ProductCategoryWrapper from "../../../atoms/productCategoryWrapper/ProductCategoryWrapper";
+
 import HomeSideBar from "../../../organisms/homeSideBar/HomeSideBar";
 import HomeProductList from "../../../organisms/homeProductList/HomeProductList";
 

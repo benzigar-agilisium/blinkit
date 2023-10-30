@@ -5,10 +5,10 @@ import VerticalWrapper from "../../atoms/verticalWrapper";
 import HorizontalWrapper from "../../atoms/horizontalWrapper";
 import ProductImage from "../../atoms/productImage";
 import ProductDiscount from "../../atoms/productDiscount";
-import ProductDeliveryTime from "../../atoms/productDeliveryTime";
+import ProductClockIcon from "../../atoms/productClockIcon";
 import Text from "../../atoms/text";
 import ProductPrice from "../../atoms/productPrice";
-import ProductCartButton from "../../atoms/productCartButton/ProductCartButton";
+import ProductCartButton from "../productCartButton/ProductCartButton";
 import useCart from "../../hooks/useCart";
 
 export default function ProductView({ className = "", type = "large", product = {} }) {
@@ -24,7 +24,7 @@ export default function ProductView({ className = "", type = "large", product = 
         </VerticalWrapper>
         {/* PRODUCT DETAILS  */}
         <VerticalWrapper className="text-xs flex flex-col px-3 pb-2">
-          <ProductDeliveryTime time={product.deliveryTime} />
+          <ProductClockIcon time={product.deliveryTime} />
           <Text lightBold size="tiny">
             {product.productName}
           </Text>

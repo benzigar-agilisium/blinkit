@@ -1,21 +1,10 @@
 import React from "react";
 import useCart from "../../../hooks/useCart";
-import { BiRupee } from "react-icons/bi";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-import { BsChevronRight } from "react-icons/bs";
-import { Link } from "react-router-dom";
-import ProductImage from "../../../atoms/productImage";
 import VerticalWrapper from "../../../atoms/verticalWrapper";
-import Heading from "../../../atoms/heading";
 
 import Container from "../../../atoms/container";
-import ProductView from "../../../molecules/productView/ProductView";
-import ProductPrice from "../../../atoms/productPrice";
-import Text from "../../../atoms/text";
-import HorizontalWrapper from "../../../atoms/horizontalWrapper";
-import CartInfo from "../../../molecules/cartInfo/CartInfo";
-import CartCheckButton from "../../../molecules/cartCheckButton";
-import EmptyCart from "../../../atoms/emptyCart/EmptyCart";
+import CartCheckoutButton from "../../../molecules/cartCheckOutButton";
+import EmptyCartPlaceHolder from "../../../molecules/emptyCartPlaceholder";
 import BillDetails from "../../../organisms/billDetails";
 import CartTopSection from "../../../organisms/cartTopSection/CartTopSection";
 
@@ -30,10 +19,10 @@ export default function Cart() {
               <CartTopSection />
               <BillDetails />
             </VerticalWrapper>
-            <CartCheckButton />
+            <CartCheckoutButton />
           </>
         ) : (
-          <EmptyCart />
+          <EmptyCartPlaceHolder />
         )}
       </VerticalWrapper>
     </Container>

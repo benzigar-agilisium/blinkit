@@ -2,30 +2,15 @@ import React from "react";
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 import ShareIcon from "../../atoms/shareIcon";
-import DownloadBanner from "../../atoms/downloadBanner";
+import FooterDownloadBanner from "../../molecules/footerDownloadBanner";
 import VerticalWrapper from "../../atoms/verticalWrapper";
 import HorizontalWrapper from "../../atoms/horizontalWrapper";
 import Container from "../../atoms/container";
 import Text from "../../atoms/text";
 
-const footerIcons = [
-  {
-    link: "https://www.facebook.com/blinkit.india/",
-    icon: FaFacebookF,
-  },
-  {
-    link: "https://twitter.com/i/flow/login?redirect_after_login=%2Fletsblinkit%2F",
-    icon: FaTwitter,
-  },
-  {
-    link: "https://www.instagram.com/letsblinkit/",
-    icon: FaInstagram,
-  },
-  {
-    link: "https://in.linkedin.com/company/letsblinkit",
-    icon: FaLinkedinIn,
-  },
-];
+import { footerIcons } from "./footer.data";
+
+const renderFooter = () => footerIcons?.map((icon) => <ShareIcon Icon={icon.icon} link={icon.link} />);
 
 export default function Footer() {
   return (
@@ -39,12 +24,8 @@ export default function Footer() {
         <div className="w-1/3">
           <p>© Blink Commerce Private Limited (formerly known as Grofers India Private Limited), 2016-2023</p>
         </div>
-        <DownloadBanner />
-        <HorizontalWrapper>
-          {footerIcons?.map((icon) => (
-            <ShareIcon Icon={icon.icon} link={icon.link} />
-          ))}
-        </HorizontalWrapper>
+        <FooterDownloadBanner />
+        <HorizontalWrapper>{renderFooter()}</HorizontalWrapper>
       </HorizontalWrapper>
     </Container>
   );

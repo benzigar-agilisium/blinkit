@@ -2,12 +2,11 @@ import React from "react";
 import ProductImage from "../../atoms/productImage";
 import SubText from "../../atoms/subText";
 
-export default function SideBarCategory({ category = {}, selected = false, setSelected = () => {} }) {
+const SideBarCategory = ({ category = {}, selected = false, setSelected = () => {} }) => {
+  const updateSelected = () => setSelected(category.id);
   return (
     <button
-      onClick={() => {
-        setSelected(category.id);
-      }}
+      onClick={updateSelected}
       className={`${
         selected ? "border-l-green-600 bg-green-50" : "border-l-white"
       } transition-all duration-300 border-l-4 w-full border-b-2 border-small-width-bottom text-xs flex items-center px-5 py-3`}
@@ -23,4 +22,6 @@ export default function SideBarCategory({ category = {}, selected = false, setSe
       </SubText>
     </button>
   );
-}
+};
+
+export default React.memo(SideBarCategory);

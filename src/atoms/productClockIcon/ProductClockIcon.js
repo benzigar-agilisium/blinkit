@@ -1,6 +1,7 @@
 import React from "react";
+import PropType from "prop-types";
 
-export default function ProductDeliveryTime({ time = "" }) {
+export default function ProductClockIcon({ time = "" }) {
   if (!time) return null;
   return (
     <div className="flex">
@@ -22,3 +23,7 @@ export default function ProductDeliveryTime({ time = "" }) {
     </div>
   );
 }
+
+ProductClockIcon.propType = {
+  time: PropType.string, // 20 mins
+};

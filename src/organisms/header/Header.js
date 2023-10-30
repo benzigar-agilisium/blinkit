@@ -3,17 +3,17 @@ import React from "react";
 // ATOMS
 import Logo from "../../atoms/logo";
 import HorizontalWrapper from "../../atoms/horizontalWrapper";
-import Searchbar from "../../atoms/searchBar";
 import Text from "../../atoms/text";
 import VerticalWrapper from "../../atoms/verticalWrapper";
 
 // MOLECULES
-import DeliveryInfo from "../../molecules/deliveryInfo";
+import HeaderDeliveryInfo from "../../molecules/headerDeliveryInfo";
 import CategoryListForHeader from "../../molecules/categoryListForHeader";
 
 import Cart from "../cart/Cart";
 
 import items from "../../data/items.json";
+import HeaderSearchBar from "../../atoms/headerSearchBar";
 
 export default function Header() {
   return (
@@ -26,8 +26,8 @@ export default function Header() {
       >
         <HorizontalWrapper align="center" className="container mx-auto">
           <Logo />
-          <DeliveryInfo />
-          <Searchbar />
+          <HeaderDeliveryInfo />
+          <HeaderSearchBar />
           <Text className="px-14">Login</Text>
           <Cart />
         </HorizontalWrapper>

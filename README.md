@@ -2,6 +2,8 @@
 
 This is a clone of the Blinkit UI (user interface) using React, Redux, and Tailwind CSS.
 
+[Demo Link](https://blinkit-clone-v30w.onrender.com)
+
 **Features:**
 
 - Home page to show all the products, with the ability to add to cart, remove from cart.

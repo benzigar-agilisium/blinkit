@@ -19,12 +19,12 @@ const RenderCategoryList = React.memo(({ paramsId, items }) =>
   ))
 );
 
-export default function CategoryListForHeader({ items = {} }) {
+export default function CategoryListForHeader({ small = false, items = {} }) {
   const params = useParams();
 
   return (
-    <VerticalWrapper className="shadow-md text-zinc-500 text-sm z-10">
-      <HorizontalWrapper justify="center" className="container mx-auto">
+    <VerticalWrapper className={classNames("shadow-md text-zinc-500 text-sm z-10", { "overflow-x-scroll": small })}>
+      <HorizontalWrapper justify={small ? "justify-start" : "center"} className="container mx-auto">
         <RenderCategoryList paramsId={params.id} items={items} />
       </HorizontalWrapper>
     </VerticalWrapper>

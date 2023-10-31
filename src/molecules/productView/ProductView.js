@@ -30,14 +30,16 @@ const LargeProductView = React.memo(({ product = {} }) => {
           <Text lightBold size="tiny">
             {product.productName}
           </Text>
-          <Text dim className="mt-2" size="tiny" lightBold>
+          <Text dim className="mt-2" size="tiny">
             {product.productQuantity}
           </Text>
           <div className="flex md:items-center md:justify-between flex-col md:flex-row mt-2">
             <VerticalWrapper className="flex flex-col">
               <ProductPrice price={product.sellingPrice} />
               <div className="flex">
-                {product.sellingPrice !== product.actualPrice ? <ProductPrice strike price={product.actualPrice} /> : null}
+                {product.sellingPrice !== product.actualPrice ? (
+                  <ProductPrice bold={false} strike price={product.actualPrice} />
+                ) : null}
               </div>
             </VerticalWrapper>
             <div className="mt-2 lg:m-0">

@@ -13,7 +13,7 @@ export default function ProductPrice({
   className = "",
 }) {
   return (
-    <div className={classNames("relative", { "text-green-600": greenColor }, className)}>
+    <div className={classNames("relative", { "text-green-600": greenColor }, { "opacity-50": strike }, className)}>
       <div className={classNames("flex items-center", { "font-bold": bold })}>
         {showMinus ? <Text>-</Text> : null}
         <BiRupee className="text-md m-0" />

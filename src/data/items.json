@@ -207,6 +207,7 @@
         "categoryName": "Munchies Gift Packs",
         "categoryImage": "https://cdn.grofers.com/a10dccab-6301-4e0c-b49e-a221b0edb0d5.png",
         "showText": "Buy Munchies Gift Packs Online",
+        "order": 2,
         "products": [
           {
             "id": "653a06ac1c914ab8466387a8",

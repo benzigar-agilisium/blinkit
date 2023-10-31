@@ -4,7 +4,6 @@ import Heading from "../../atoms/heading";
 import SubText from "../../atoms/subText";
 import Text from "../../atoms/text";
 import VerticalWrapper from "../../atoms/verticalWrapper";
-import HeaderSearchBar from "../../atoms/headerSearchBar";
 
 export default function HeaderDeliveryInfo() {
   return (

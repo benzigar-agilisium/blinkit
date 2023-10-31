@@ -1,14 +1,14 @@
 export const dropDownOptions = [
   {
-    id: "RELEVANCE",
+    id: "NONE",
     display: "Relevance",
   },
   {
-    id: "ASCENDING",
-    display: "Ascending",
+    id: "PRICE_ASC",
+    display: "Price - Lower to High",
   },
   {
-    id: "DESCENDING",
-    display: "Descending",
+    id: "PRICE_DESC",
+    display: "Price - High to Lower",
   },
 ];

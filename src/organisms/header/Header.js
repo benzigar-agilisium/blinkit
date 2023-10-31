@@ -13,7 +13,7 @@ import CategoryListForHeader from "../../molecules/categoryListForHeader";
 import Cart from "../cartButton";
 
 import items from "../../data/items.json";
-import HeaderSearchBar from "../../atoms/headerSearchBar";
+import HeaderSearchBar from "../../molecules/headerSearchBar";
 
 export default function Header() {
   return (

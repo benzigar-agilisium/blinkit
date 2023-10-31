@@ -5,6 +5,7 @@ import items from "../../data/items.json";
 export default function HomePage() {
   const navigate = useNavigate();
 
+  // NAVIGATE TO FIRST MAIN CATEGORY
   React.useEffect(() => {
     navigate("/cd/" + items?.[0]?.slug);
   }, []);

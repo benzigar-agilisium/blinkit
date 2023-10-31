@@ -4,6 +4,10 @@ This is a clone of the Blinkit UI (user interface) using React, Redux, and Tailw
 
 [Demo Link](https://blinkit-clone-v30w.onrender.com)
 
+**Note:**
+
+- This repository contains the build folder for easy deployment to hosting providers. Some providers do not build this project correctly, so I build locally and deploy through the providers.
+
 **Features:**
 
 - Home page to show all the products, with the ability to add to cart, remove from cart.

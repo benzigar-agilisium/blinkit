@@ -1,3 +1,3 @@
-import NotFound from "@/pages/notFound";
+import NotFound from "../notFound/NotFound";
 
 export default NotFound;

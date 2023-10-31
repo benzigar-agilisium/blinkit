@@ -8,7 +8,7 @@ import classNames from "classnames";
 export default function BillDetails({ className = "" }) {
   const { getActualTotalAmount, getProductDiscount, getTotalAmount } = useCart();
   return (
-    <VerticalWrapper className={classNames(`text-xs bg-white mt-3 flex-col p-3 rounded-lg`, className)}>
+    <VerticalWrapper className={classNames(`text-xs bg-white lg:mt-3 flex-col p-3 rounded-lg`, className)}>
       <CartInfo heading="MRP" price={getActualTotalAmount()} />
       <CartInfo showRupees={false} heading="Delivery charge" greenColor price={"Free"} />
       {getProductDiscount() ? <CartInfo heading="Product Discount" showMinus greenColor price={getProductDiscount()} /> : null}

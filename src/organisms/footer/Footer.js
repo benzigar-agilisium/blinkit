@@ -15,7 +15,7 @@ const renderFooter = () => footerIcons?.map((icon) => <ShareIcon Icon={icon.icon
 export default function Footer() {
   return (
     <Container className="mt-10">
-      <Text dim size="tiny" center className="my-5">
+      <Text dim size="tiny" center className="mx-3 lg:mx-0 my-5">
         “Blinkit” is owned & managed by "Blink Commerce Private Limited" (formerly known as Grofers India Private Limited) and is
         not related, linked or interconnected in whatsoever manner or nature, to “GROFFR.COM” which is a real estate services
         business operated by “Redstone Consultancy Services Private Limited”.

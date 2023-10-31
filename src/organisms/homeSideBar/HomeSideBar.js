@@ -10,7 +10,7 @@ const getItemList = (items = [], setSelectedCategory, selectedCategory) =>
 
 export default function HomeSideBar({ items, selectedCategory = false, setSelectedCategory = () => {} }) {
   return (
-    <VerticalWrapper className="border-r-2 border-small-width-right w-1/5 overflow-y-scroll pt-5">
+    <VerticalWrapper className="border-r-2 border-small-width-right w-1/5 lg:w-1/5 overflow-y-scroll pt-5">
       {getItemList(items, setSelectedCategory, selectedCategory)}
     </VerticalWrapper>
   );

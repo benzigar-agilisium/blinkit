@@ -17,13 +17,13 @@ import HeaderSearchBar from "../../atoms/headerSearchBar";
 
 export default function Header() {
   return (
-    <VerticalWrapper className="bg-white z-20 sticky top-0">
+    <VerticalWrapper className="hidden lg:flex bg-white z-20 sticky top-0">
       <VerticalWrapper className="border-b-2">
         <HorizontalWrapper align="center" className="container mx-auto">
           <Logo />
           <HeaderDeliveryInfo />
           <HeaderSearchBar />
-          <Text className="hidden lg:flex px-14">Login</Text>
+          <Text className="px-14">Login</Text>
           <Cart />
         </HorizontalWrapper>
       </VerticalWrapper>

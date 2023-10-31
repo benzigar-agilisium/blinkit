@@ -29,7 +29,7 @@ export default function Products() {
   }, [params.id]);
 
   return selectedCategory ? (
-    <VerticalWrapper className="container mx-auto px-10">
+    <VerticalWrapper className="container mx-auto lg:px-10">
       <ProductCategoryWrapper>
         <HomeSideBar items={itemsList} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         <HomeProductList items={itemsList} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />

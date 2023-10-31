@@ -33,18 +33,22 @@ const LargeProductView = React.memo(({ product = {} }) => {
           <Text dim className="mt-2" size="tiny" lightBold>
             {product.productQuantity}
           </Text>
-          <HorizontalWrapper justify="space-between" className="mt-2">
+          <div className="flex md:items-center md:justify-between flex-col md:flex-row mt-2">
             <VerticalWrapper className="flex flex-col">
               <ProductPrice price={product.sellingPrice} />
-              {product.sellingPrice !== product.actualPrice ? <ProductPrice strike price={product.actualPrice} /> : null}
+              <div className="flex">
+                {product.sellingPrice !== product.actualPrice ? <ProductPrice strike price={product.actualPrice} /> : null}
+              </div>
             </VerticalWrapper>
-            <ProductCartButton
-              addCartClick={() => addToCart(product)}
-              addQuantityClick={() => addQuantity(product.id)}
-              removeQuantityClick={() => removeQuantity(product.id)}
-              quantity={getQuantityInCart(product.id)}
-            />
-          </HorizontalWrapper>
+            <div className="mt-2 lg:m-0">
+              <ProductCartButton
+                addCartClick={() => addToCart(product)}
+                addQuantityClick={() => addQuantity(product.id)}
+                removeQuantityClick={() => removeQuantity(product.id)}
+                quantity={getQuantityInCart(product.id)}
+              />
+            </div>
+          </div>
         </VerticalWrapper>
       </VerticalWrapper>
     </>
@@ -54,7 +58,7 @@ const LargeProductView = React.memo(({ product = {} }) => {
 const SmallProductView = React.memo(({ product = {}, className = "" }) => {
   const { addToCart, getQuantityInCart, addQuantity, removeQuantity } = useCart();
   return (
-    <HorizontalWrapper align="stretch" className={classNames("mt-10 flex text-xs", className)}>
+    <HorizontalWrapper align="stretch" className={classNames("my-5 flex text-xs", className)}>
       <ProductImage type="small" imageUrl={product.productImage} />
       <VerticalWrapper className="flex-1 ml-3 flex justify-between flex-col">
         <VerticalWrapper className="max-w-[150px]">

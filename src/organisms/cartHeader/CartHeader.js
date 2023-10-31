@@ -23,10 +23,10 @@ const CartHeader = () => {
 
   return (
     <VerticalWrapper className="bg-white flex-col p-3 rounded-lg">
-      <Heading className="text-xl font-bold mb-5">Place Order</Heading>
+      <Heading className="lg:text-xl font-bold lg:mb-5">Place Order</Heading>
       <HorizontalWrapper>
         <VerticalWrapper>
-          <Text lightBold size="large">
+          <Text lightBold size="tiny">
             Delivery in 15 minutes
           </Text>
           <Text size="tiny" dim>

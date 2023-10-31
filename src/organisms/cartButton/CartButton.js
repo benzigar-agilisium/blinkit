@@ -24,7 +24,7 @@ export default function CartButton() {
 
   return (
     <>
-      <button onClick={cartButtonClick} className="hidden lg:flex flex-col bg-green-700 text-white py-3 rounded-lg px-4">
+      <button onClick={cartButtonClick} className="flex-col bg-green-700 text-white py-3 rounded-lg px-4">
         <div className="min-w-[90px] flex items-center">
           <AiOutlineShoppingCart className="hover:rotate-12 transition-all text-3xl" />
           {cart?.length > 0 ? <RenderButtonContent /> : <p className="text-xs font-bold ml-2">My Cart</p>}

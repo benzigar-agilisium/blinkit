@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+**Blinkit UI Clone**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a clone of the Blinkit UI (user interface) using React, Redux, and Tailwind CSS.
 
-## Available Scripts
+[Demo Link](https://blinkit-clone-v30w.onrender.com)
 
-In the project directory, you can run:
+**Note:**
 
-### `npm start`
+- This repository contains the build folder for easy deployment to hosting providers. Some providers do not build this project correctly, so I build locally and deploy through the providers.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Features:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Home page to show all the products, with the ability to add to cart, remove from cart.
+- Cart page to show all the items in the cart, with the ability to remove items and proceed to checkout.
 
-### `npm test`
+**Dependencies:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React v18.2.0
+- Redux v4.2.1
+- React Redux v8.1.3
+- React Router DOM v6.17.0
+- Redux Toolkit v1.9.7
+- React Icons v4.11.0
+- @fontsource/poppins v5.0.8
+- tailwindcss v3.3.4
 
-### `npm run build`
+**Project Structure**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project is structured as follows:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `pages`: Contains the pages of the application.
+- `components`: Contains reusable components that can be used throughout the application.
+- `hooks`: Contains custom hooks that are used to provide additional functionality to components.
+- `store`: Contains the Redux store configuration.
+- `data`: Contains the JSON file of whole product list.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Getting started:**
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+git clone https://github.com/benzigar-agilisium/blinkit.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install the dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Start the development server:
 
-## Learn More
+```
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Open the application in your browser at http://localhost:3000.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Running tests:**
 
-### Code Splitting
+```
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Deploying the application:**
 
-### Analyzing the Bundle Size
+To deploy the application to production, you can use a service such as Vercel or Netlify.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Contributing**
 
-### Making a Progressive Web App
+Contributions are welcome! Please feel free to open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**License**
 
-### Advanced Configuration
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I hope this is helpful!

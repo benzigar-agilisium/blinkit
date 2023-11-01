@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.border-small-width {
+  border-width: 1px;
+}
+
+.border-small-width-right {
+  border-right-width: 1px;
+}
+
+.border-small-width-bottom {
+  border-bottom-width: 1px;
+}
+
+.border-small-width-x {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+*:focus {
+  outline: none;
+}

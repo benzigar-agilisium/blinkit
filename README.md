@@ -1,6 +1,7 @@
 **Blinkit UI Clone**
 
 This is a clone of the Blinkit UI (user interface) using React, Redux, and Tailwind CSS.
+Every code is in [blinkit-request](https://github.com/benzigar-agilisium/blinkit/tree/blinkit-request) branch.
 
 [Demo Link](https://blinkit-clone-v30w.onrender.com)
 

@@ -9,13 +9,7 @@ import useCart from "../../hooks/useCart";
 const renderItemText = (items) => `${items} ${items === 1 ? "item" : "items"}`;
 
 const RenderCart = React.memo(({ cart = [] }) => {
-  return (
-    <>
-      {cart.map((product) => (
-        <ProductView type="cart" product={product} />
-      ))}
-    </>
-  );
+  return cart.map((product) => <ProductView type="cart" product={product} />);
 });
 
 const CartHeader = () => {

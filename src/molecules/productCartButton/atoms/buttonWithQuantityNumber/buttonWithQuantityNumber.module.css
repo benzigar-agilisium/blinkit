@@ -1,0 +1,5 @@
+.quantityButton {
+  @apply font-bold justify-between flex items-center border-green-700 px-2 bg-green-700 rounded-md text-xs text-white;
+  border-width: 1px;
+  min-width: 80px;
+}

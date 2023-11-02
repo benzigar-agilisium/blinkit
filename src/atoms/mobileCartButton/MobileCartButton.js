@@ -4,6 +4,7 @@ import useCart from "../../hooks/useCart";
 import { AiFillCaretRight, AiOutlineShoppingCart } from "react-icons/ai";
 import ProductPrice from "../productPrice";
 import Text from "../text";
+import styles from "./mobileCartButton.module.css";
 
 export default function MobileCartButton() {
   const navigate = useNavigate();
@@ -17,10 +18,7 @@ export default function MobileCartButton() {
 
   return (
     <div className="md:hidden z-40 fixed bottom-0 left-0 right-0 p-3">
-      <button
-        onClick={cartButtonClick}
-        className="flex-1 shadow-xl w-full flex flex-col bg-green-700 text-white px-3 py-2 rounded-lg"
-      >
+      <button onClick={cartButtonClick} className={styles.mobileCartButton}>
         <div className="w-full flex items-center">
           <div className="flex flex-1 items-center">
             <div className="bg-green-600 rounded-md p-2">

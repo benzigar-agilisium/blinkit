@@ -1,0 +1,3 @@
+.dot {
+  @apply mx-2 h-1 w-1 rounded-full bg-white;
+}

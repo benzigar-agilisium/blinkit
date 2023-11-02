@@ -1,0 +1,3 @@
+.mobileCartButton {
+  @apply flex-1 shadow-xl w-full flex flex-col bg-green-700 text-white px-3 py-2 rounded-lg;
+}

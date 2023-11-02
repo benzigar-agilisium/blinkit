@@ -2,16 +2,11 @@ import classNames from "classnames";
 import React from "react";
 import { BiRupee } from "react-icons/bi";
 
+import propTypes from "prop-types";
+
 import Text from "../text";
 
-export default function ProductPrice({
-  strike = false,
-  greenColor = false,
-  showMinus = false,
-  bold = true,
-  price = 0,
-  className = "",
-}) {
+export default function ProductPrice({ strike, greenColor, showMinus, bold, price, className }) {
   return (
     <div className={classNames("relative", { "text-green-600": greenColor }, { "opacity-50": strike }, className)}>
       <div className={classNames("flex items-center", { "font-bold": bold })}>
@@ -27,3 +22,21 @@ export default function ProductPrice({
     </div>
   );
 }
+
+ProductPrice.propTypes = {
+  strike: propTypes.bool,
+  greenColor: propTypes.bool,
+  showMinus: propTypes.bool,
+  bold: propTypes.bool,
+  price: propTypes.number,
+  className: propTypes.string,
+};
+
+ProductPrice.defaultProps = {
+  strike: false,
+  greenColor: false,
+  showMinus: false,
+  bold: true,
+  price: 0,
+  className: "",
+};

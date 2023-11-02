@@ -14,7 +14,11 @@ import ProductCartButton from "../productCartButton/ProductCartButton";
 import useCart from "../../hooks/useCart";
 
 const LargeProductView = React.memo(({ product = {} }) => {
-  const { addToCart, getQuantityInCart, addQuantity, removeQuantity } = useCart();
+  const { cart, addToCart, getQuantityInCart, addQuantity, removeQuantity } = useCart();
+
+  const addToCartMemo = React.useMemo(() => () => addToCart(product), [cart, product]);
+  const addQuantityMemo = React.useMemo(() => () => addQuantity(product.id), [cart, product]);
+  const removeQuantityMemo = React.useMemo(() => () => removeQuantity(product.id), [cart, product]);
 
   return (
     <>
@@ -44,9 +48,9 @@ const LargeProductView = React.memo(({ product = {} }) => {
             </VerticalWrapper>
             <div className="mt-2 lg:m-0">
               <ProductCartButton
-                addCartClick={() => addToCart(product)}
-                addQuantityClick={() => addQuantity(product.id)}
-                removeQuantityClick={() => removeQuantity(product.id)}
+                addCartClick={addToCartMemo}
+                addQuantityClick={addQuantityMemo}
+                removeQuantityClick={removeQuantityMemo}
                 quantity={getQuantityInCart(product.id)}
               />
             </div>
@@ -59,6 +63,11 @@ const LargeProductView = React.memo(({ product = {} }) => {
 
 const SmallProductView = React.memo(({ product = {}, className = "" }) => {
   const { addToCart, getQuantityInCart, addQuantity, removeQuantity } = useCart();
+
+  const addToCartMemo = React.useMemo(() => () => addToCart(product), [product]);
+  const addQuantityMemo = React.useMemo(() => () => addQuantity(product.id), [product]);
+  const removeQuantityMemo = React.useMemo(() => () => removeQuantity(product.id), [product]);
+
   return (
     <HorizontalWrapper align="stretch" className={classNames("my-5 flex text-xs", className)}>
       <ProductImage type="small" imageUrl={product.productImage} />
@@ -76,9 +85,9 @@ const SmallProductView = React.memo(({ product = {}, className = "" }) => {
       </VerticalWrapper>
       <VerticalWrapper className="flex flex-col">
         <ProductCartButton
-          addCartClick={() => addToCart(product)}
-          addQuantityClick={() => addQuantity(product.id)}
-          removeQuantityClick={() => removeQuantity(product.id)}
+          addCartClick={addToCartMemo}
+          addQuantityClick={addQuantityMemo}
+          removeQuantityClick={removeQuantityMemo}
           quantity={getQuantityInCart(product.id)}
         />
       </VerticalWrapper>
@@ -86,7 +95,7 @@ const SmallProductView = React.memo(({ product = {}, className = "" }) => {
   );
 });
 
-const ProductView = ({ className = "", type = "large", product = {} }) => {
+const ProductView = ({ className, type, product }) => {
   if (type === "large") return <LargeProductView product={product} className={className} />;
   if (type === "cart") return <SmallProductView product={product} className={className} />;
   else return null;
@@ -96,6 +105,12 @@ ProductView.propTypes = {
   className: Proptypes.string,
   type: Proptypes.string,
   product: Proptypes.object,
+};
+
+ProductView.defaultProps = {
+  className: "",
+  type: "large",
+  product: {},
 };
 
 export default React.memo(ProductView);

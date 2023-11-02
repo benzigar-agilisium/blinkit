@@ -1,16 +1,8 @@
 import classNames from "classnames";
 import React from "react";
+import propTypes from "prop-types";
 
-export default function HorizontalWrapper({
-  wrap = false,
-  align = "",
-  className = "",
-  children,
-  justify = "",
-  cutOnPhone = false,
-  style = {},
-  ...rest
-}) {
+export default function HorizontalWrapper({ wrap, align, className, children, justify, cutOnPhone, style, ...rest }) {
   return (
     <div
       style={{
@@ -25,3 +17,22 @@ export default function HorizontalWrapper({
     </div>
   );
 }
+
+HorizontalWrapper.propTypes = {
+  wrap: propTypes.bool,
+  align: propTypes.string,
+  className: propTypes.string,
+  children: propTypes.element,
+  justify: propTypes.string,
+  cutOnPhone: propTypes.bool,
+  style: propTypes.object,
+};
+
+HorizontalWrapper.propTypes = {
+  wrap: false,
+  align: "",
+  className: "",
+  justify: "",
+  cutOnPhone: false,
+  style: {},
+};

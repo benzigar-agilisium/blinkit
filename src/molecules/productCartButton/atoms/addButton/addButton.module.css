@@ -1,0 +1,10 @@
+/* .addButton {
+  font-weight: 600;
+}
+ */
+
+.addButton {
+  @apply min-w-[80px] bg-green-50 px-5 py-2 border-2 border-green-700 rounded-md text-sm text-green-700;
+  border-width: 1px;
+  font-weight: 600;
+}

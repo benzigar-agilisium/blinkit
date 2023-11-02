@@ -1,5 +1,6 @@
 import React from "react";
+import styles from "./dotDivider.module.css";
 
 export default function DotDivider() {
-  return <div className="mx-2 h-1 w-1 rounded-full bg-white"></div>;
+  return <div className={styles.dot}></div>;
 }

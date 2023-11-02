@@ -4,7 +4,7 @@ import SubText from "../../atoms/subText";
 import Text from "../../atoms/text";
 
 const SideBarCategory = ({ category = {}, selected = false, setSelected = () => {} }) => {
-  const updateSelected = () => setSelected(category.id);
+  const updateSelected = React.useCallback(() => setSelected(category.id), [selected]);
   return (
     <button
       onClick={updateSelected}

@@ -46,9 +46,16 @@ export default function ProductCartButton({
     );
 }
 
-ProductCartButton.propType = {
+ProductCartButton.propTypes = {
   quantity: propTypes.number,
   addCartClick: propTypes.func,
   removeQuantityClick: propTypes.func,
   addQuantityClick: propTypes.func,
+};
+
+ProductCartButton.defaultProps = {
+  quantity: 0,
+  addCartClick: () => {},
+  removeQuantityClick: () => {},
+  addQuantityClick: () => {},
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function SubText({ children, className = "", style = {}, ...rest }) {
   return (
@@ -13,3 +14,11 @@ export default function SubText({ children, className = "", style = {}, ...rest 
     </p>
   );
 }
+
+SubText.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.element,
+  style: PropTypes.object,
+};
+
+SubText.defaultProps = { className: "", style: {} };

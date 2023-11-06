@@ -1,38 +1,13 @@
 import classNames from "classnames";
 import React from "react";
+import PropTypes from "prop-types";
+
 import { BiSearch } from "react-icons/bi";
 
-import ProductView from "../../molecules/productView";
-import Text from "../../atoms/text";
-import SearchEmptyPlaceholder from "../../atoms/serachEmptyPlaceholder";
-
-import { getSearchResults } from "./headerSearchBar.data";
 import { AiOutlineClose } from "react-icons/ai";
+
 import useAction from "./headerSearchBar.actions";
-
-// ATOMS
-const RenderSearchList = React.memo(({ products = [] }) => (
-  <div className="flex flex-wrap">
-    {products?.map((product) => (
-      <div className="flex flex-col p-1 w-1/2 xl:w-1/3">
-        <ProductView product={product} />
-      </div>
-    ))}
-  </div>
-));
-
-const RenderSearchResult = React.memo(({ searchText = "" }) => {
-  const products = React.useCallback(() => getSearchResults(searchText), [searchText]);
-  if (!searchText) return null;
-  return (
-    <div className="mt-2 bg-zinc-50 flex flex-col overflow-y-scroll absolute left-0 right-0 rounded-md shadow-xl top-[100%] h-[70vh] p-1 md:p-3">
-      <Text className="ml-2 mb-2" bold size="large">
-        Search Results for "{searchText}"
-      </Text>
-      {products().length > 0 ? <RenderSearchList products={products()} /> : <SearchEmptyPlaceholder />}
-    </div>
-  );
-});
+import RenderSearchResult from "./renderSearchResult";
 
 const RenderIcon = React.memo(({ searchText = "", clearSearch = () => {} }) => {
   if (searchText.length === 0) return <BiSearch className="text-2xl" />;
@@ -62,3 +37,10 @@ export default function HeaderSearchBar({ sticky = false, className = "" }) {
     </div>
   );
 }
+
+HeaderSearchBar.defaultProps = { sticky: false, className: "" };
+
+HeaderSearchBar.propTypes = {
+  sticky: PropTypes.bool,
+  className: PropTypes.string,
+};

@@ -6,7 +6,7 @@ import ProductPrice from "../productPrice";
 import Text from "../text";
 import styles from "./mobileCartButton.module.css";
 
-export default function MobileCartButton() {
+const MobileCartButton = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { cart, getItemCount, getTotalAmount } = useCart();
@@ -37,4 +37,6 @@ export default function MobileCartButton() {
       </button>
     </div>
   );
-}
+};
+
+export default React.memo(MobileCartButton);

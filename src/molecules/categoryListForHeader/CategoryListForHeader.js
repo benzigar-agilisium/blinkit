@@ -1,25 +1,14 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import classNames from "classnames";
+import PropTypes from "prop-types";
+
 import VerticalWrapper from "../../atoms/verticalWrapper";
 import HorizontalWrapper from "../../atoms/horizontalWrapper";
-import { Link, useParams } from "react-router-dom";
-import classNames from "classnames";
 
-const RenderCategoryList = React.memo(({ paramsId, items }) =>
-  items.map((item) => (
-    <Link
-      replace
-      to={"/cd/" + item.slug}
-      className={classNames("px-4 hover:bg-zinc-100 py-4", {
-        "text-black": item.id === paramsId || item.slug === paramsId,
-        "font-bold": item.id === paramsId || item.slug === paramsId,
-      })}
-    >
-      {item.categoryName}
-    </Link>
-  ))
-);
+import RenderCategoryList from "./renderCategoryList";
 
-export default function CategoryListForHeader({ small = false, items = {} }) {
+export default function CategoryListForHeader({ small = false, items = [] }) {
   const params = useParams();
 
   return (
@@ -30,3 +19,13 @@ export default function CategoryListForHeader({ small = false, items = {} }) {
     </VerticalWrapper>
   );
 }
+
+CategoryListForHeader.propTypes = {
+  small: PropTypes.bool,
+  items: PropTypes.array,
+};
+
+CategoryListForHeader.defaultProps = {
+  small: false,
+  items: [],
+};

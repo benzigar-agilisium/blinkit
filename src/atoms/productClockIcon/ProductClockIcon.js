@@ -27,3 +27,7 @@ export default function ProductClockIcon({ time = "" }) {
 ProductClockIcon.propType = {
   time: PropType.string, // 20 mins
 };
+
+ProductClockIcon.defaultProps = {
+  time: "",
+};

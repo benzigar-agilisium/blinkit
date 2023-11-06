@@ -1,4 +1,5 @@
 import React from "react";
+import Proptypes from "prop-types";
 
 export default function ProductDiscount({ percentage = 0 }) {
   if (!percentage) return null;
@@ -19,3 +20,11 @@ export default function ProductDiscount({ percentage = 0 }) {
     </div>
   );
 }
+
+ProductDiscount.propTypes = {
+  percentage: Proptypes.number,
+};
+
+ProductDiscount.defaultProps = {
+  percentage: 0,
+};

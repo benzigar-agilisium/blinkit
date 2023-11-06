@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function VerticalWrapper({ className = "", children, ...rest }) {
   return (
@@ -7,3 +8,12 @@ export default function VerticalWrapper({ className = "", children, ...rest }) {
     </div>
   );
 }
+
+VerticalWrapper.defaultProps = {
+  className: "",
+};
+
+VerticalWrapper.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.element,
+};

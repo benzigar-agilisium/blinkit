@@ -1,5 +1,5 @@
 import React from "react";
-import ProductImage from "../../atoms/productImage";
+import ProductImage from "../productImage";
 import SubText from "../../atoms/subText";
 import Text from "../../atoms/text";
 

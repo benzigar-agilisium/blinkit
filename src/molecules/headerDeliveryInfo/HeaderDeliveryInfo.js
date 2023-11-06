@@ -1,6 +1,5 @@
 import React from "react";
 
-import Heading from "../../atoms/heading";
 import SubText from "../../atoms/subText";
 import Text from "../../atoms/text";
 import VerticalWrapper from "../../atoms/verticalWrapper";

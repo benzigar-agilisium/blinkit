@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Text({
   size = "small",
@@ -32,3 +33,23 @@ export default function Text({
     </p>
   );
 }
+
+Text.propTypes = {
+  size: PropTypes.string,
+  dim: PropTypes.bool,
+  lightBold: PropTypes.bool,
+  bold: PropTypes.bool,
+  className: PropTypes.string,
+  center: PropTypes.bool,
+  style: PropTypes.object,
+};
+
+Text.defaultProps = {
+  size: "small",
+  dim: false,
+  lightBold: false,
+  bold: false,
+  className: "",
+  center: false,
+  style: {},
+};

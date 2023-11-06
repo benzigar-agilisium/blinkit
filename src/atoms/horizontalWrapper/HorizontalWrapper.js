@@ -28,7 +28,7 @@ HorizontalWrapper.propTypes = {
   style: propTypes.object,
 };
 
-HorizontalWrapper.propTypes = {
+HorizontalWrapper.defaultProps = {
   wrap: false,
   align: "",
   className: "",

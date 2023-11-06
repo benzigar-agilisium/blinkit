@@ -10,6 +10,8 @@ const Heading = ({ className = "", size = "large", children }) => {
   );
 };
 
+Heading.defaultProps = { className: "", size: "large" };
+
 Heading.propTypes = {
   className: PropTypes.string,
   size: PropTypes.oneOf(["large", "medium"]),
